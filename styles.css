@@ -1,0 +1,61 @@
+:root {
+    --orange: #f0bd6a;
+    --outline: #0b0406;
+    --black: #444546;
+    --white: #ffffff;
+    --clear: rgba(0,0,0,0);
+
+    /* why doesn't this work? */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+    --colorpoint: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    --defaultMaskColor: var(--orange);
+    --defaultMittenColor: var(--orange);
+    --defaultTuxedoColor: var(--black);
+    --defaultEyeColor: var(--outline);
+
+    --defaultBorder: 3px solid var(--outline);
+
+    --stripes: repeating-radial-gradient(circle, var(--clear), var(--clear) 10px, var(--black) 10px, var(--black) 20px);
+    --stripesHorizontal: repeating-radial-gradient(circle, var(--clear), var(--clear) 10px, var(--black) 10px, var(--black) 20px);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100px;
+}
+
+.cat-wrapper {
+    width: 250px;
+    height: 300px;
+}
+
+.cat {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* absolutely position all descendants - doesn't seem to work on pseudoelements? */
+.cat *,
+.cat *:before,
+.cat *:after {
+    position: absolute;
+}
+
+.cat *:before,
+.cat *:after {
+    content: '';
+}
+
+.cat-head {
+    width: 72%;
+    height: 38%;
+    top: 12%;
+}

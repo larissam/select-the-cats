@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select the cats</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="variants.css" />
+
+        <style>
+
+            .cat-head--masked .cat-head-base:before {
+                width: 75%;
+                height: 75%;
+                background-color: var(--defaultMaskColor);
+                border-radius: 50%;
+                transform: rotate(-29deg);
+                top: -15%;
+                left: -22%;
+            }
+
+            .cat-head--masked .cat-head-base:after {
+                width: 85%;
+                height: 85%;
+                background-color: var(--defaultMaskColor);
+                border-radius: 50%;
+                transform: rotate(6deg);
+                right: -17%;
+                top: -17%;
+            }
+
+            .cat-head--masked .cat-ear-left,
+            .cat-head--masked .cat-ear-right {
+                background-color: var(--defaultMaskColor);
+            }
+
+            .cat--striped .cat-forehead {
+                width: 38%;
+                height: 34%;
+                background: var(--stripes);
+                z-index: 1;
+                top: -12%;
+                left: 25%;
+                transform: skewX(-18deg);
+                border-radius: 50%;
+            }
+
+            .cat--striped .cat-body-base:after {
+                background: var(--stripesHorizontal);
+                height: 37%;
+                width: 50%;
+                border-radius: 39%;
+                right: -32%;
+                bottom: 43%;
+                transform: rotate(-19deg);
+            }
+
+
+
+            
+
+            .cat-head-base {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background-color: inherit;
+                border: 3px solid var(--outline);
+                border-top-left-radius: 51%;
+                border-top-right-radius: 52%;
+                border-bottom-right-radius: 50%;
+                border-bottom-left-radius: 47%;
+            }
+
+
+            .cat-ear {
+                background-color: inherit;
+                border-radius: 4px;
+                border-top: 3px solid var(--outline);
+            }
+
+            .cat-ear-left {
+                border-bottom-left-radius: 21px;
+
+                height: 25%;
+                width: 17%;
+
+                left: 7%;
+                top: -8%;
+
+                transform: rotate(40deg);
+
+                border-left: 3px solid var(--outline);
+            }
+            .cat-ear-right {
+                border-top-left-radius: 18px;
+                border-bottom-right-radius: 16px;
+
+                height: 38%;
+                width: 26%;
+
+                top: -8%;
+                right: 7%;
+
+                transform: rotate(-20deg);
+
+                border-right: 3px solid var(--outline);
+            }
+
+            .cat-face {
+                width: 74%;
+                height: 74%;
+                border-radius: inherit;
+                top: 24%;
+                left: 7%;
+                z-index: 1;
+            }
+            .cat-face--white {
+                background-color: var(--white);
+            }
+
+            /* eye */
+            .cat-face:before {
+                width: 10%;
+                height: 15%;
+                background-color: var(--defaultEyeColor);
+                border-radius: 50%;
+
+                top: 26%;
+                left: 9%;
+            }
+            /* eye */
+            .cat-face:after {
+                width: 10%;
+                height: 15%;
+                background-color: var(--defaultEyeColor);
+                border-radius: 50%;
+
+                top: 26%;
+                right: 23%;
+            }
+
+            .cat-muzzle {
+                background-color: var(--clear);
+                border: 9px solid var(--clear);
+                border-top-color: var(--outline);
+                border-radius: 30%;
+                height: 5%;
+                width: 5%;
+                left: 32%;
+                top: 50%;
+            }
+            .cat-muzzle:before {
+                width: 400%;
+                height: 800%;
+                background-color: inherit;
+                border: 4px solid var(--clear);
+                border-bottom-color: var(--outline);
+                border-radius: 50%;
+                top: -825%;
+                left: -400%;
+            }
+            .cat-muzzle:after {
+                width: 500%;
+                height: 800%;
+                background-color: inherit;
+                border: 4px solid var(--clear);
+                border-bottom-color: var(--outline);
+                border-radius: 50%;
+                top: -825%;
+                right: -475%;
+            }
+
+            .cat-body {
+                width: 70%;
+                height: 60%;
+
+                margin-left: 15%;
+                bottom: 0;
+            }
+
+            .cat-body-base {
+                background-color: inherit;
+                border: var(--defaultBorder);
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+
+                border-top-left-radius: 29%;
+                border-top-right-radius: 70%;
+                border-bottom-right-radius: 40%;
+                border-bottom-left-radius: 30%;
+
+                overflow: hidden;
+            }
+
+            .cat-body--tuxedo .cat-body-base:before {
+                background-color: var(--defaultTuxedoColor);
+                height: 100%;
+                width: 50%;
+                border-radius: 39%;
+                right: -18%;
+                bottom: 5%;
+                transform: rotate(-19deg);
+            }
+
+            .cat-body--tuxedo .cat-tail {
+                border-color: var(--defaultTuxedoColor);
+            }
+
+            .cat-body--tuxedo .cat-tail:before {
+                background-color: var(--defaultTuxedoColor);
+            }
+
+
+            .cat-body--tuxedo.cat-body--tuxedo-orange .cat-body-base:before,
+            .cat-body--tuxedo.cat-body--tuxedo-orange .cat-tail:before {
+                background-color: var(--orange);
+            }
+            .cat-body--tuxedo.cat-body--tuxedo-orange .cat-tail {
+                border-color: var(--orange);
+            }
+
+
+            .cat-leg {
+                background-color: inherit;
+                border: var(--defaultBorder);
+                border-top: 0;
+                border-bottom-left-radius: 68%;
+                border-bottom-right-radius: 52%;
+
+                height: 28%;
+                width: 27%;
+
+                overflow: hidden;
+            }
+
+            .cat-leg-left {
+                bottom: -5%;
+            }
+
+            .cat-leg-right {
+                bottom: -6%;
+                left: 33%;
+            }
+            
+            .cat-tail {
+                background-color: var(--clear);
+                border-right: 36px solid;
+                border-color: inherit;
+                border-top-right-radius: 46%;
+                border-bottom-right-radius: 106%;
+                height: 100%;
+                width: 30%;
+                position: absolute;
+                right: -19%;
+                bottom: 5%;
+                z-index: -2;
+                transform: rotate(3deg);
+            }
+
+            .cat-tail:before {
+                background-color: inherit;
+                height: 20%;
+                width: 57%;
+                top: -2%;
+                border-top-left-radius: 28%;
+                border-top-right-radius: 72%;
+                right: -52%;
+                transform: rotate(-7deg);
+            }
+
+            .cat-tail-shadow {
+                border-color: var(--outline) !important;
+                right: -16.5%;
+                bottom: 4.55%;
+                z-index: -3;
+                transform: scaleX(1.15) scaleY(1.05) rotate(3deg);
+            }
+
+            .cat-tail-shadow:before {
+                background-color: var(--outline) !important; /* lol */ 
+            }
+
+        </style>
+    </head>
+    <body>
+        <img src="modelcat.png" />
+        <div class="cat-wrapper">
+            <div class="cat cat--white cat--striped">
+                <div class="cat-head cat-head--masked cat-head--masked-orange">
+                    <div class="cat-head-base">
+                        <div class="cat-forehead"></div>
+                        <div class="cat-face">
+                            <div class="cat-muzzle">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat-ear cat-ear-left"></div>
+                    <div class="cat-ear cat-ear-right"></div>
+                </div>
+                <div class="cat-body cat-body--mittens cat-body--tuxedo cat-body--tuxedo-orange">
+                    <div class="cat-body-base">
+                    </div>
+                    <div class="cat-leg cat-leg-left"></div>
+                    <div class="cat-leg cat-leg-right"></div>
+                    <div class="cat-tail"></div>
+                    <div class="cat-tail cat-tail-shadow"></div>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li>mask</li>
+            <li>tuxedo</li>
+            <li>mittens</li>
+            <li>colorpoint</li>
+            <li>tabby</li>
+            <li>eye color</li>
+            <li>bow</li>
+        </ul>
+    </body>
+</html>

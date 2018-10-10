@@ -1,0 +1,69 @@
+/*
+ * Base variants
+ */
+.cat--orange .cat-head-base,
+.cat--orange .cat-ear,
+.cat--orange .cat-leg,
+.cat--orange .cat-body-base,
+.cat--orange .cat-tail:before {
+    background-color: var(--orange); 
+}
+
+.cat--orange .cat-tail {
+    border-color: var(--orange);
+}
+
+.cat--white .cat-head-base,
+.cat--white .cat-ear,
+.cat--white .cat-leg,
+.cat--white .cat-body-base,
+.cat--white .cat-tail:before {
+    background-color: var(--white); 
+}
+
+.cat--white .cat-tail {
+    border-color: var(--white);
+}
+
+.cat--black .cat-head-base,
+.cat--black .cat-ear,
+.cat--black .cat-leg,
+.cat--black .cat-body-base,
+.cat--black .cat-tail:before {
+    background-color: var(--black); 
+}
+
+.cat--black .cat-tail {
+    border-color: var(--black);
+}
+
+/*
+ * Mitten variants
+ */
+.cat-body--mittens .cat-leg:before {
+    width: 110%;
+    height: 110%;
+    border-radius: inherit;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 45%;
+    background-color: var(--defaultMittenColor);
+}
+
+.cat-body--mittens.cat-body--mittens-black .cat-leg:before {
+    background-color: var(--black);
+}
+
+/*
+ * Mask variants
+ */
+.cat-head--masked.cat-head--masked-orange .cat-head-base:before,
+.cat-head--masked.cat-head--masked-orange .cat-head-base:after,
+.cat-head--masked.cat-head--masked-orange .cat-ear {
+    background-color: var(--orange);
+}
+
+.cat-head--masked.cat-head--masked-black .cat-head-base:before,
+.cat-head--masked.cat-head--masked-black .cat-head-base:after,
+.cat-head--masked.cat-head--masked-black .cat-ear {
+    background-color: var(--black);
+}
