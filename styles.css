@@ -4,6 +4,7 @@
     --black: #444546;
     --white: #ffffff;
     --clear: rgba(0,0,0,0);
+    --blue: #244779;
 
     /* why doesn't this work? */
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
@@ -49,6 +50,8 @@ img {
     position: absolute;
 }
 
+.cat:before,
+.cat:after,
 .cat *:before,
 .cat *:after {
     content: '';
