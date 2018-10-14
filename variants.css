@@ -1,41 +1,75 @@
 /*
- * Base variants
+ * Base variants - color
  */
 .cat--orange .cat-head-base,
 .cat--orange .cat-ear,
 .cat--orange .cat-leg,
 .cat--orange .cat-body-base,
-.cat--orange .cat-tail:before {
-    background-color: var(--orange); 
-}
-
 .cat--orange .cat-tail {
-    border-color: var(--orange);
+    background-color: var(--orange); 
 }
 
 .cat--white .cat-head-base,
 .cat--white .cat-ear,
 .cat--white .cat-leg,
 .cat--white .cat-body-base,
-.cat--white .cat-tail:before {
-    background-color: var(--white); 
-}
-
 .cat--white .cat-tail {
-    border-color: var(--white);
+    background-color: var(--white); 
 }
 
 .cat--black .cat-head-base,
 .cat--black .cat-ear,
 .cat--black .cat-leg,
 .cat--black .cat-body-base,
-.cat--black .cat-tail:before {
+.cat--black .cat-tail {
     background-color: var(--black); 
 }
 
-.cat--black .cat-tail {
-    border-color: var(--black);
+/*
+ * Base variants - tabby
+ */
+ .cat--tabby .cat-forehead {
+    background: repeating-radial-gradient(
+        circle at 182% 172%, 
+        transparent, 
+        transparent 15px, 
+        var(--black) 15px, 
+        var(--black) 30px
+    );
 }
+
+.cat--tabby .cat-forehead:before {
+    background: radial-gradient(
+        ellipse at 23% -2%, 
+        var(--black), 
+        var(--black) 7.5px, 
+        transparent 7.5px, 
+        transparent
+    );
+}
+
+.cat--tabby .cat-forehead:after {
+    background: radial-gradient(
+        ellipse at 65.5% -7%, 
+        var(--black), 
+        var(--black) 8.5px, 
+        transparent 8.5px, 
+        transparent
+    );
+}
+
+.cat--tabby .cat-tail:after {
+    width: 100%;
+    height: 64%;
+    background: repeating-radial-gradient(
+        circle at 22% -33%, 
+        transparent, 
+        transparent 16px, 
+        var(--black) 16px, 
+        var(--black) 37px
+    );            
+}
+
 
 /*
  * Mitten variants
@@ -66,4 +100,41 @@
 .cat-head--masked.cat-head--masked-black .cat-head-base:after,
 .cat-head--masked.cat-head--masked-black .cat-ear {
     background-color: var(--black);
+}
+
+/*
+ * Bow variants
+ */
+.cat--bow-neck .cat-bow {
+    display: block;
+    top: 43%;
+    left: 19%;
+
+    background: radial-gradient(circle at 0%, var(--blue) 40%, black 40%, black 45%, transparent 45%), radial-gradient(circle at 100%, var(--blue) 40%, black 40%, black 45%, transparent 45%);
+}
+
+.cat--bow-neck .cat-bow:before {
+    background-color: var(--blue);
+}
+
+.cat--bow-head .cat-bow {
+    display: block;
+    top: 6%;
+    right: 38%;
+
+    background: radial-gradient(circle at 0%, var(--red) 40%, black 40%, black 45%, transparent 45%), radial-gradient(circle at 100%, var(--red) 40%, black 40%, black 45%, transparent 45%);
+}
+
+.cat--bow-head .cat-bow:before {
+    background-color: var(--red);
+}
+
+.cat--bow-tail .cat-bow {
+    display: block;
+    top: 40%;
+    right: -3%;
+    background: radial-gradient(circle at 0%, var(--green) 40%, black 40%, black 45%, transparent 45%), radial-gradient(circle at 100%, var(--green) 40%, black 40%, black 45%, transparent 45%);
+}
+.cat--bow-tail .cat-bow:before {
+    background-color: var(--green);
 }
