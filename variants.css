@@ -1,34 +1,59 @@
 /*
  * Base variants - color
  */
-.cat--orange .cat-head-base,
-.cat--orange .cat-ear,
-.cat--orange .cat-leg,
-.cat--orange .cat-body-base,
-.cat--orange .cat-tail {
+.cat--color-orange .cat-head-base,
+.cat--color-orange .cat-ear,
+.cat--color-orange .cat-leg,
+.cat--color-orange .cat-body-base,
+.cat--color-orange .cat-tail {
     background-color: var(--orange); 
 }
 
-.cat--white .cat-head-base,
-.cat--white .cat-ear,
-.cat--white .cat-leg,
-.cat--white .cat-body-base,
-.cat--white .cat-tail {
+.cat--color-white .cat-head-base,
+.cat--color-white .cat-ear,
+.cat--color-white .cat-leg,
+.cat--color-white .cat-body-base,
+.cat--color-white .cat-tail {
     background-color: var(--white); 
 }
 
-.cat--black .cat-head-base,
-.cat--black .cat-ear,
-.cat--black .cat-leg,
-.cat--black .cat-body-base,
-.cat--black .cat-tail {
+.cat--color-black .cat-head-base,
+.cat--color-black .cat-ear,
+.cat--color-black .cat-leg,
+.cat--color-black .cat-body-base,
+.cat--color-black .cat-tail {
     background-color: var(--black); 
+}
+
+.cat--color-cream .cat-head-base,
+.cat--color-cream .cat-ear,
+.cat--color-cream .cat-leg,
+.cat--color-cream .cat-body-base,
+.cat--color-cream .cat-tail {
+    background-color: var(--cream); 
+}
+
+.cat--color-gray .cat-head-base,
+.cat--color-gray .cat-ear,
+.cat--color-gray .cat-leg,
+.cat--color-gray .cat-body-base,
+.cat--color-gray .cat-tail {
+    background-color: var(--gray); 
 }
 
 /*
  * Base variants - tabby
+ * Stripes on head, back, and tail
  */
- .cat--tabby .cat-forehead {
+.cat--tabby .cat-forehead,
+.cat--tabby .cat-forehead:before,
+.cat--tabby .cat-forehead:after,
+.cat--tabby .cat-tail:after,
+.cat--tabby .cat-body-back {
+    filter: brightness(0.75);
+}
+ 
+.cat--tabby.cat--tabby-color-black .cat-forehead {
     background: repeating-radial-gradient(
         circle at 182% 172%, 
         transparent, 
@@ -38,7 +63,7 @@
     );
 }
 
-.cat--tabby .cat-forehead:before {
+.cat--tabby.cat--tabby-color-black .cat-forehead:before {
     background: radial-gradient(
         ellipse at 23% -2%, 
         var(--black), 
@@ -48,7 +73,7 @@
     );
 }
 
-.cat--tabby .cat-forehead:after {
+.cat--tabby.cat--tabby-color-black .cat-forehead:after {
     background: radial-gradient(
         ellipse at 65.5% -7%, 
         var(--black), 
@@ -58,7 +83,7 @@
     );
 }
 
-.cat--tabby .cat-tail:after {
+.cat--tabby.cat--tabby-color-black .cat-tail:after {
     width: 100%;
     height: 64%;
     background: repeating-radial-gradient(
@@ -70,11 +95,325 @@
     );            
 }
 
+.cat--tabby.cat--tabby-color-black .cat-body-back {
+    background: repeating-radial-gradient(
+        circle at 29% -36%, 
+        transparent, 
+        transparent 21px, 
+        var(--black) 15px, 
+        var(--black) 38px
+    );
+    
+}
+
+/* gray */
+.cat--tabby.cat--tabby-color-gray .cat-forehead {
+    background: repeating-radial-gradient(
+        circle at 182% 172%, 
+        transparent, 
+        transparent 15px, 
+        var(--gray) 15px, 
+        var(--gray) 30px
+    );
+}
+
+.cat--tabby.cat--tabby-color-gray .cat-forehead:before {
+    background: radial-gradient(
+        ellipse at 23% -2%, 
+        var(--gray), 
+        var(--gray) 7.5px, 
+        transparent 7.5px, 
+        transparent
+    );
+}
+
+.cat--tabby.cat--tabby-color-gray .cat-forehead:after {
+    background: radial-gradient(
+        ellipse at 65.5% -7%, 
+        var(--gray), 
+        var(--gray) 8.5px, 
+        transparent 8.5px, 
+        transparent
+    );
+}
+
+.cat--tabby.cat--tabby-color-gray .cat-tail:after {
+    width: 100%;
+    height: 64%;
+    background: repeating-radial-gradient(
+        circle at 22% -33%, 
+        transparent, 
+        transparent 16px, 
+        var(--gray) 16px, 
+        var(--gray) 37px
+    );            
+}
+
+.cat--tabby.cat--tabby-color-gray .cat-body-back {
+    background: repeating-radial-gradient(
+        circle at 29% -36%, 
+        transparent, 
+        transparent 21px, 
+        var(--gray) 15px, 
+        var(--gray) 38px
+    );
+    
+}
+
+/* orange */
+.cat--tabby.cat--tabby-color-orange .cat-forehead {
+    background: repeating-radial-gradient(
+        circle at 182% 172%, 
+        transparent, 
+        transparent 15px, 
+        var(--orange) 15px, 
+        var(--orange) 30px
+    );
+}
+
+.cat--tabby.cat--tabby-color-orange .cat-forehead:before {
+    background: radial-gradient(
+        ellipse at 23% -2%, 
+        var(--orange), 
+        var(--orange) 7.5px, 
+        transparent 7.5px, 
+        transparent
+    );
+}
+
+.cat--tabby.cat--tabby-color-orange .cat-forehead:after {
+    background: radial-gradient(
+        ellipse at 65.5% -7%, 
+        var(--orange), 
+        var(--orange) 8.5px, 
+        transparent 8.5px, 
+        transparent
+    );
+    filter: brightness(0.5);
+}
+
+.cat--tabby.cat--tabby-color-orange .cat-tail:after {
+    width: 100%;
+    height: 64%;
+    background: repeating-radial-gradient(
+        circle at 22% -33%, 
+        transparent, 
+        transparent 16px, 
+        var(--orange) 16px, 
+        var(--orange) 37px
+    );            
+}
+
+.cat--tabby.cat--tabby-color-orange .cat-body-back {
+    background: repeating-radial-gradient(
+        circle at 29% -36%, 
+        transparent, 
+        transparent 21px, 
+        var(--orange) 15px, 
+        var(--orange) 38px
+    );
+}
+
+/* cream */
+.cat--tabby.cat--tabby-color-cream .cat-forehead {
+    background: repeating-radial-gradient(
+        circle at 182% 172%, 
+        transparent, 
+        transparent 15px, 
+        var(--cream) 15px, 
+        var(--cream) 30px
+    );
+}
+
+.cat--tabby.cat--tabby-color-cream .cat-forehead:before {
+    background: radial-gradient(
+        ellipse at 23% -2%, 
+        var(--cream), 
+        var(--cream) 7.5px, 
+        transparent 7.5px, 
+        transparent
+    );
+}
+
+.cat--tabby.cat--tabby-color-cream .cat-forehead:after {
+    background: radial-gradient(
+        ellipse at 65.5% -7%, 
+        var(--cream), 
+        var(--cream) 8.5px, 
+        transparent 8.5px, 
+        transparent
+    );
+    filter: brightness(0.5);
+}
+
+.cat--tabby.cat--tabby-color-cream .cat-tail:after {
+    width: 100%;
+    height: 64%;
+    background: repeating-radial-gradient(
+        circle at 22% -33%, 
+        transparent, 
+        transparent 16px, 
+        var(--cream) 16px, 
+        var(--cream) 37px
+    );            
+}
+
+.cat--tabby.cat--tabby-color-cream .cat-body-back {
+    background: repeating-radial-gradient(
+        circle at 29% -36%, 
+        transparent, 
+        transparent 21px, 
+        var(--cream) 15px, 
+        var(--cream) 38px
+    );
+}
+
+/* white */
+.cat--tabby.cat--tabby-color-white .cat-forehead {
+    background: repeating-radial-gradient(
+        circle at 182% 172%, 
+        transparent, 
+        transparent 15px, 
+        var(--white) 15px, 
+        var(--white) 30px
+    );
+}
+
+.cat--tabby.cat--tabby-color-white .cat-forehead:before {
+    background: radial-gradient(
+        ellipse at 23% -2%, 
+        var(--white), 
+        var(--white) 7.5px, 
+        transparent 7.5px, 
+        transparent
+    );
+}
+
+.cat--tabby.cat--tabby-color-white .cat-forehead:after {
+    background: radial-gradient(
+        ellipse at 65.5% -7%, 
+        var(--white), 
+        var(--white) 8.5px, 
+        transparent 8.5px, 
+        transparent
+    );
+    filter: brightness(0.5);
+}
+
+.cat--tabby.cat--tabby-color-white .cat-tail:after {
+    width: 100%;
+    height: 64%;
+    background: repeating-radial-gradient(
+        circle at 22% -33%, 
+        transparent, 
+        transparent 16px, 
+        var(--white) 16px, 
+        var(--white) 37px
+    );            
+}
+
+.cat--tabby.cat--tabby-color-white .cat-body-back {
+    background: repeating-radial-gradient(
+        circle at 29% -36%, 
+        transparent, 
+        transparent 21px, 
+        var(--white) 15px, 
+        var(--white) 38px
+    );
+}
 
 /*
- * Mitten variants
+ * Base variants - tuxedo
+ * Mask on face, tuxedo on back and tail
  */
-.cat-body--mittens .cat-leg:before {
+.cat--tuxedo .cat-head-base:before,
+.cat--tuxedo .cat-head-base:after,
+.cat--tuxedo .cat-ear,
+.cat--tuxedo .cat-head-base:before,
+.cat--tuxedo .cat-head-base:after,
+.cat--tuxedo .cat-body-base:before,
+.cat--tuxedo .cat-tail,
+.cat--tuxedo .cat-tail:before {
+    background-color: var(--defaultTuxedoColor);
+}
+
+.cat--tuxedo .cat-head-base:before {
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    transform: rotate(-29deg);
+    top: -15%;
+    left: -22%;
+}
+
+.cat--tuxedo .cat-head-base:after {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    transform: rotate(6deg);
+    right: -17%;
+    top: -17%;
+}
+
+.cat--tuxedo .cat-body-base:before {
+    height: 100%;
+    width: 50%;
+    border-radius: 39%;
+    right: -18%;
+    bottom: 5%;
+    transform: rotate(-19deg);
+}
+
+.cat--tuxedo.cat--tuxedo-color-black .cat-head-base:before,
+.cat--tuxedo.cat--tuxedo-color-black .cat-head-base:after,
+.cat--tuxedo.cat--tuxedo-color-black .cat-ear,
+.cat--tuxedo.cat--tuxedo-color-black .cat-head-base:before,
+.cat--tuxedo.cat--tuxedo-color-black .cat-head-base:after,
+.cat--tuxedo.cat--tuxedo-color-black .cat-body-base:before,
+.cat--tuxedo.cat--tuxedo-color-black .cat-tail,
+.cat--tuxedo.cat--tuxedo-color-black .cat-tail:before {
+    background-color: var(--black);
+}
+
+.cat--tuxedo.cat--tuxedo-color-gray .cat-head-base:before,
+.cat--tuxedo.cat--tuxedo-color-gray .cat-head-base:after,
+.cat--tuxedo.cat--tuxedo-color-gray .cat-ear,
+.cat--tuxedo.cat--tuxedo-color-gray .cat-head-base:before,
+.cat--tuxedo.cat--tuxedo-color-gray .cat-head-base:after,
+.cat--tuxedo.cat--tuxedo-color-gray .cat-body-base:before,
+.cat--tuxedo.cat--tuxedo-color-gray .cat-tail,
+.cat--tuxedo.cat--tuxedo-color-gray .cat-tail:before {
+    background-color: var(--gray);
+}
+
+.cat--tuxedo.cat--tuxedo-color-orange .cat-head-base:before,
+.cat--tuxedo.cat--tuxedo-color-orange .cat-head-base:after,
+.cat--tuxedo.cat--tuxedo-color-orange .cat-ear,
+.cat--tuxedo.cat--tuxedo-color-orange .cat-head-base:before,
+.cat--tuxedo.cat--tuxedo-color-orange .cat-head-base:after,
+.cat--tuxedo.cat--tuxedo-color-orange .cat-body-base:before,
+.cat--tuxedo.cat--tuxedo-color-orange .cat-tail,
+.cat--tuxedo.cat--tuxedo-color-orange .cat-tail:before {
+    background-color: var(--orange);
+}
+
+.cat--tuxedo.cat--tuxedo-color-cream .cat-head-base:before,
+.cat--tuxedo.cat--tuxedo-color-cream .cat-head-base:after,
+.cat--tuxedo.cat--tuxedo-color-cream .cat-ear,
+.cat--tuxedo.cat--tuxedo-color-cream .cat-head-base:before,
+.cat--tuxedo.cat--tuxedo-color-cream .cat-head-base:after,
+.cat--tuxedo.cat--tuxedo-color-cream .cat-body-base:before,
+.cat--tuxedo.cat--tuxedo-color-cream .cat-tail,
+.cat--tuxedo.cat--tuxedo-color-cream .cat-tail:before {
+    background-color: var(--cream);
+}
+
+
+/*
+ * Base variants - mittens
+ * Mittens on front paws
+ */
+.cat--mittens .cat-leg:before {
     width: 110%;
     height: 110%;
     border-radius: inherit;
@@ -83,28 +422,30 @@
     background-color: var(--defaultMittenColor);
 }
 
-.cat-body--mittens.cat-body--mittens-black .cat-leg:before {
-    background-color: var(--black);
-}
-
 /*
- * Mask variants
+ * Base variants - bows
+ * Bow on neck, head, or tail
  */
-.cat-head--masked.cat-head--masked-orange .cat-head-base:before,
-.cat-head--masked.cat-head--masked-orange .cat-head-base:after,
-.cat-head--masked.cat-head--masked-orange .cat-ear {
-    background-color: var(--orange);
+
+.cat-bow {
+    display: none;
+    width: 20%;
+    height: 17%;
+    border-left: var(--defaultBorder);
+    border-right: var(--defaultBorder);
+    z-index: 2;
+    transform: scaleX(1.1) scaleY(0.6);
 }
 
-.cat-head--masked.cat-head--masked-black .cat-head-base:before,
-.cat-head--masked.cat-head--masked-black .cat-head-base:after,
-.cat-head--masked.cat-head--masked-black .cat-ear {
-    background-color: var(--black);
+.cat-bow:before {
+    width: 30%;
+    height: 50%;
+    border: var(--defaultBorder);
+    border-radius: 50%;
+    left: 27%;
+    top: 15%;
 }
 
-/*
- * Bow variants
- */
 .cat--bow-neck .cat-bow {
     display: block;
     top: 43%;
@@ -137,4 +478,36 @@
 }
 .cat--bow-tail .cat-bow:before {
     background-color: var(--green);
+}
+
+/*
+ * Base variants - eye color
+ * Black, blue, green, orange, odd
+ */
+
+.cat--eye-black .cat-muzzle:before,
+.cat--eye-black .cat-muzzle:after {
+    background-color: var(--defaultEyeColor);
+}
+
+.cat--eye-blue .cat-muzzle:before,
+.cat--eye-blue .cat-muzzle:after {
+    background-color: var(--eyeColorBlue);
+}
+
+.cat--eye-green .cat-muzzle:before,
+.cat--eye-green .cat-muzzle:after {
+    background-color: var(--eyeColorGreen);
+}
+
+.cat--eye-orange .cat-muzzle:before,
+.cat--eye-orange .cat-muzzle:after {
+    background-color: var(--eyeColorOrange);
+}
+
+.cat--eye-odd .cat-muzzle:before {
+    background-color: var(--eyeColorBlue);
+}
+.cat--eye-odd .cat-muzzle:after {
+    background-color: var(--eyeColorGreen);
 }
